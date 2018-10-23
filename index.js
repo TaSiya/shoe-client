@@ -2,7 +2,7 @@ const api = APIServices();
 const dom = DomFactory();
 
 var invocation = new XMLHttpRequest();
-var url = 'https://kasi-shoe-api.herokuapp.com/';
+var url = 'https://kasi-shoe-api.herokuapp.com/api/';
 
 /* **********************************************************************************************************************
 # Referencing the dom elements
@@ -268,24 +268,24 @@ function DomFactory() {
 function APIServices() {
 
     function displayAll() {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/stock');
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/stock');
     }
 
     function dropdowns() {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/default');
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/default');
     }
 
     function cartData() {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/cart');
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/cart');
     }
 
 
     function addingCart(id) {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/stock/' + id)
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/stock/' + id)
     }
 
     function addNewStock(name, colourtag, size, stock, price) {
-        return axios.post('http://kasi-shoe-api.herokuapp.com/api/add', {
+        return axios.post('https://kasi-shoe-api.herokuapp.com/api/add', {
             name,
             colourtag,
             size,
@@ -295,24 +295,24 @@ function APIServices() {
     }
 
     function removeCart() {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/clearCart');
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/clearCart');
     }
 
     function removeStock() {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/clearStock');
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/clearStock');
     }
 
     function filterBrand(brand) {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/filter/brand/' + brand);
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/filter/brand/' + brand);
     }
     function filterColour(colour) {
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/filter/colour/' + colour);
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/filter/colour/' + colour);
     }
     function filterSize(size){
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/filter/size/'+size);
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/filter/size/'+size);
     }
     function filterStock(stock){
-        return axios.get('http://kasi-shoe-api.herokuapp.com/api/filter/stock/'+stock);
+        return axios.get('https://kasi-shoe-api.herokuapp.com/api/filter/stock/'+stock);
      }
     return {
         displayAll,
