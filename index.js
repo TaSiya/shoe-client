@@ -313,7 +313,7 @@ function APIServices() {
     }
     function filterStock(stock){
         return axios.get('http://kasi-shoe-api.herokuapp.com/api/filter/stock/'+stock);
-    }
+     }
     return {
         displayAll,
         dropdowns,
