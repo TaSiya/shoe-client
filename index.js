@@ -2,7 +2,7 @@ const api = APIServices();
 const dom = DomFactory();
 
 var invocation = new XMLHttpRequest();
-var url = 'http://kasi-shoe-api.herokuapp.com/';
+var url = 'https://kasi-shoe-api.herokuapp.com/';
 
 /* **********************************************************************************************************************
 # Referencing the dom elements
